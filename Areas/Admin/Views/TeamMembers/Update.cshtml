@@ -1,0 +1,52 @@
+﻿@model TeamMemberUpdateDto
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Update Member</h4>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <input asp-for="@Model.getDto.Id" hidden>
+                <input asp-for="@Model.getDto.Image" hidden>
+                <div class="form-group">
+                    <label asp-for="@Model.postDto.Name"></label>
+                    <input asp-for="@Model.postDto.Name" type="text" class="form-control" value="@Model.getDto.Name">
+                    <span asp-validation-for="@Model.postDto.Name" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.postDto.Position"></label>
+                    <input asp-for="@Model.postDto.Position" type="text" class="form-control" value="@Model.getDto.Position">
+                    <span asp-validation-for="@Model.postDto.Position" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.postDto.FacebookLink"></label>
+                    <input asp-for="@Model.postDto.FacebookLink" type="text" class="form-control" value="@Model.getDto.FacebookLink">
+                    <span asp-validation-for="postDto.FacebookLink" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.postDto.LinkedinLink"></label>
+                    <input asp-for="@Model.postDto.LinkedinLink" type="text" class="form-control" value="@Model.getDto.LinkedinLink">
+                    <span asp-validation-for="@Model.postDto.LinkedinLink" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.postDto.TwitterLink"></label>
+                    <input asp-for="@Model.postDto.TwitterLink" type="text" class="form-control" value="@Model.getDto.TwitterLink">
+                    <span asp-validation-for="@Model.postDto.TwitterLink" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="@Model.postDto.formFile">File Upload</label>
+                    <input asp-for="@Model.postDto.formFile" type="file" class="form-control" />
+                </div>
+                <div>
+                    <img src="~/assets/img/@Model.getDto.Image" class="m-3 rounded"/>
+                </div>
+                <button type="submit" class="btn btn-primary me-2 text-light">Submit</button>
+                <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+

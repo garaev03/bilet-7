@@ -1,0 +1,46 @@
+﻿@model TeamMemberPostDto
+@{
+    ViewData["Title"] = "Add Member";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add Member</h4>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" type="text" class="form-control">
+                    <span asp-validation-for="Name" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Position"></label>
+                    <input asp-for="Position" type="text" class="form-control">
+                    <span asp-validation-for="Position" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FacebookLink"></label>
+                    <input asp-for="FacebookLink" type="text" class="form-control">
+                    <span asp-validation-for="FacebookLink" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LinkedinLink"></label>
+                    <input asp-for="LinkedinLink" type="text" class="form-control">
+                    <span asp-validation-for="LinkedinLink" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TwitterLink"></label>
+                    <input asp-for="TwitterLink" type="text" class="form-control">
+                    <span asp-validation-for="TwitterLink" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="formFile">File Upload</label>
+                    <input asp-for="formFile" type="file" class="form-control"/>
+                </div>
+                <button type="submit" class="btn btn-primary me-2 text-light">Submit</button>
+                <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

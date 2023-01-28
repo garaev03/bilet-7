@@ -1,0 +1,39 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Setting";
+}
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Team Members</h4>
+            <a asp-action="Update" class="btn btn-warning text-light">Update</a>
+            <div class="table-responsive">
+                <table class="table table-striped" style="vertical-align:middle">
+                    <thead>
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                Logo
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>
+                                    @Model.Id
+                                </td>
+                                <td class="py-1">
+                                    @Model.Logo
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,42 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Update Settings</h4>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label asp-for="Logo"></label>
+                    <input asp-for="Logo" type="text" class="form-control" >
+                    <span asp-validation-for="Logo" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FacebookLink"></label>
+                    <input asp-for="FacebookLink" type="text" class="form-control" >
+                    <span asp-validation-for="FacebookLink" class="text text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LinkedinLink"></label>
+                    <input asp-for="LinkedinLink" type="text" class="form-control" >
+                    <span asp-validation-for="LinkedinLink" class="text text-danger"></span>
+                </div>
+                   <div class="form-group">
+                    <label asp-for="TwitterLink"></label>
+                    <input asp-for="TwitterLink" type="text" class="form-control">
+                    <span asp-validation-for="TwitterLink" class="text text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2 text-light">Submit</button>
+                <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
